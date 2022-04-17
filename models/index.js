@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connect = () => {
-    let path = "mongodb://172.17.0.3/ratingdb";
+    let path = "mongodb://172.17.0.2/ratingdb";
     if (process.env.MONGO_HOST) {
         path = `mongodb://${process.env.MONGO_HOST}/db`;
     }
@@ -9,7 +9,7 @@ const connect = () => {
         .connect(path, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useCreateIndex: true,
+            // useCreateIndex: true,
             ignoreUndefined: true,
         })
         .then(() => {
