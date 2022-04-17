@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rating-url
+data:
+  PRODUCT_SERVICE_URL: 'http://product.default.svc:8080'
+  USER_SERVICE_URL: 'http://user.default.svc:8080'
+  CART_SERVICE_URL: 'http://cart.default.svc:8080'
+  ORDER_SERVICE_URL: 'http://order.default.svc:8080'  
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rating-db
+data:
+  MONGO_HOST: 'rating-db.default.svc:27017'
